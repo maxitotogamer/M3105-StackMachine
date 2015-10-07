@@ -18,4 +18,8 @@ public class Memory
 	public void write(int currentAddress, int opCode) {
 		this.tMemory[currentAddress] = opCode;
 	}
+	
+	public int read(int address){
+		return this.tMemory[address];
+	}
 }
