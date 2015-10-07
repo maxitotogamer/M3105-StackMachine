@@ -27,7 +27,13 @@ public class CPU
 	public final static int JZ		= 0x13;
 	public final static int DUP		= 0x14;
 	public final static int POP		= 0x15;
-	
+
+	private Memory programMemory;
+	private Stack expStack;
+	private IO ioSystem;
+	private Stack callStack;
+	private int opCode; // A revoir
+
 	// TODO something is missing here...
 
 	public void run()
@@ -41,122 +47,122 @@ public class CPU
 				// System.err.print("@" + this.programCounter + ": ");
 				switch (opCode)
 				{
-					case HALT:
-					{
-						// System.err.println("HALT");
-						this.ioSystem.displayProgramTermination();
-						return;
-					}
-					case PUSH:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case ADD:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case SUB:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case MUL:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case DIV:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case MOD:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case NEG:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case LT:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case LE:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case GT:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case GE:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case EQ:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case NE:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case IN:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case OUT:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case CALL:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case RET:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case JP:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case JZ:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case DUP:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					case POP:
-					{
-						// TODO something is missing here...
-						break;
-					}
-					default:
-					{
-						// TODO something is missing here...
-						return;
-					}
+				case HALT:
+				{
+					// System.err.println("HALT");
+					this.ioSystem.displayProgramTermination();
+					return;
+				}
+				case PUSH:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case ADD:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case SUB:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case MUL:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case DIV:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case MOD:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case NEG:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case LT:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case LE:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case GT:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case GE:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case EQ:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case NE:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case IN:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case OUT:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case CALL:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case RET:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case JP:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case JZ:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case DUP:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				case POP:
+				{
+					// TODO something is missing here...
+					break;
+				}
+				default:
+				{
+					// TODO something is missing here...
+					return;
+				}
 				}
 			}
 		}
@@ -178,5 +184,37 @@ public class CPU
 		}		
 	}
 
-	// TODO something is missing here...
+	public void wireToProgramMemory(Memory programMemory){
+		this.programMemory = programMemory;
+	}
+
+	public void wireToExpStack(Stack expStack){
+		this.expStack = expStack;
+	}
+
+	public void wireToCallStack(Stack callStack)
+	{
+		this.callStack = callStack;
+	}
+
+	public void wireToIoSubsystem(IO ioSystem)
+	{
+		this.ioSystem = ioSystem;
+	}
+
+	public void clearStacks()
+	{
+		this.callStack.clearStack();
+		this.expStack.clearStack();
+	}
+
+	/**
+	 * Program Counter
+	 * @param address
+	 */
+	public void setPC(int address)
+	{
+		// TODO something is missing here...
+	}
+
 }
