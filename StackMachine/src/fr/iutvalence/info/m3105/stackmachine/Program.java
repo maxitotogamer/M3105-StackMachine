@@ -2,9 +2,9 @@ package fr.iutvalence.info.m3105.stackmachine;
 
 public class Program
 {
-	private int[] instructions;
+	private Instruction[] instructions;
 
-	public Program(int[] instruction){
+	public Program(Instruction[] instruction){
 		this.instructions = instruction;
 	}
 	
@@ -12,7 +12,7 @@ public class Program
 		return this.instructions.length;
 	}
 	
-	public int getInstructionAt(int instructionNumber){
+	public Instruction getInstructionAt(int instructionNumber){
 		return this.instructions[instructionNumber]; 
 	}
 }
