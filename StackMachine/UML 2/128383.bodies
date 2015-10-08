@@ -1,0 +1,5 @@
+class Stack
+!!!131455.java!!!	Stack(in taille : int)
+		this.tableau = new int[taille];
+!!!131583.java!!!	clearStack() : void
+	
