@@ -1,0 +1,7 @@
+class Program
+!!!131071.java!!!	Program(inout instruction : Instruction)
+		this.instructions = instruction;
+!!!131199.java!!!	getInstructionCount() : int
+		return this.instructions.length;
+!!!131327.java!!!	getInstructionAt(in instructionNumber : int) : Instruction
+		return this.instructions[instructionNumber]; 

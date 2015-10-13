@@ -435,6 +435,50 @@ ${members}}
 	comment "Program Counter
 @param address"
       end
+
+      classrelation 128002 // <composition>
+	relation 128002 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128002 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128130 // <composition>
+      end
+
+      classrelation 128386 // <composition>
+	relation_ref 128130 // <composition>
+      end
+
+      classrelation 128514 // <composition>
+	relation 128258 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128514 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128642 // <composition>
+      end
+
+      classrelation 129026 // <composition>
+	relation 128514 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129026 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129154 // <composition>
+      end
+
+      classrelation 129410 // <composition>
+	relation_ref 128642 // <composition>
+      end
     end
 
     class 128255 "Memory"
@@ -531,6 +575,22 @@ ${members}}
 	
 	
       end
+
+      classrelation 129538 // <composition>
+	relation 128770 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129538 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129666 // <composition>
+      end
+
+      classrelation 129922 // <composition>
+	relation_ref 128898 // <composition>
+      end
     end
 
     class 128383 "Stack"
@@ -578,6 +638,10 @@ ${members}}
 	
 	
 	
+      end
+
+      classrelation 130178 // <composition>
+	relation_ref 129026 // <composition>
       end
     end
 
@@ -687,6 +751,10 @@ ${members}}
 	
 	
 	
+      end
+
+      classrelation 130562 // <composition>
+	relation_ref 129282 // <composition>
       end
     end
 
@@ -834,6 +902,91 @@ ${members}}
 	
 	
       end
+
+      classrelation 128130 // <composition>
+	relation_ref 128002 // <composition>
+      end
+
+      classrelation 128258 // <composition>
+	relation 128130 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128258 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128386 // <composition>
+      end
+
+      classrelation 128642 // <composition>
+	relation_ref 128258 // <composition>
+      end
+
+      classrelation 129154 // <composition>
+	relation_ref 128514 // <composition>
+      end
+
+      classrelation 129282 // <composition>
+	relation 128642 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129282 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129410 // <composition>
+      end
+
+      classrelation 129666 // <composition>
+	relation_ref 128770 // <composition>
+      end
+
+      classrelation 129794 // <composition>
+	relation 128898 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129794 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 129922 // <composition>
+      end
+
+      classrelation 130050 // <composition>
+	relation 129026 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130050 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130178 // <composition>
+      end
+
+      classrelation 130306 // <directional composition>
+	relation 129154 *-->
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130306 // <directional composition>
+	  b parent class_ref 128511 // IO
+      end
+
+      classrelation 130434 // <composition>
+	relation 129282 *---
+	  a role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130434 // <composition>
+	  b role_name "" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130562 // <composition>
+      end
     end
 
     class 128895 "Program"
@@ -921,7 +1074,7 @@ ${members}}
     end
 
     classdiagram 128127 "diagram"
-      draw_all_relations default hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context default show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 show_parameter_dir yes show_parameter_name yes package_name_in_tab yes class_drawing_mode default drawing_language uml show_context_mode default auto_label_position default show_relation_modifiers yes show_relation_visibility yes show_infonote default shadow default show_stereotype_properties default
+      draw_all_relations no hide_attributes no hide_operations no hide_getset_operations no show_members_full_definition yes show_members_visibility yes show_members_stereotype yes show_members_context default show_members_multiplicity yes show_members_initialization yes show_attribute_modifiers yes member_max_width 0 show_parameter_dir yes show_parameter_name yes package_name_in_tab yes class_drawing_mode default drawing_language uml show_context_mode default auto_label_position default show_relation_modifiers yes show_relation_visibility yes show_infonote default shadow default show_stereotype_properties default
       size A4
     end
   end

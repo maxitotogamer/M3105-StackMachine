@@ -1,10 +1,5 @@
-package fr.iutvalence.info.m3105.stackmachine;
-
-public class MachineLauncher
-{
-
-	public static void main(String[] args)
-	{
+class MachineLauncher
+!!!130431.java!!!	main(inout args : String) : void
 		/*
 		0x0: 		in	  		// read a value value from IO and push it to exp-stack
 		0x1: 		call 0x5	// call the subroutine at @ of label named "fact"
@@ -55,17 +50,17 @@ public class MachineLauncher
 
 		try
 		{
-			programMemory = new Memory8for16(0x00000000, 0x00000020);
-			expStack = new Stack8(16);
-			callStack = new Stack8(16);
+			programMemory = new Memory(0x00000000, 0x00000020);
+			expStack = new Stack(16);
+			callStack = new Stack(16);
 		}
 		catch (InvalidParametersException e)
 		{
 			// Safely ignore this error, which is not one
 		}
 		
-		IO ioSystem = new IOConsole(System.in, System.out, System.err);
-		CPU cpu = new CPUStackMachine();		
+		IO ioSystem = new IO(System.in, System.out, System.err);
+		CPU cpu = new CPU();		
 		Machine machine = new Machine(cpu, programMemory, expStack, callStack, ioSystem );
 		try
 		{
@@ -77,5 +72,3 @@ public class MachineLauncher
 			System.exit(1);
 		}
 		machine.executeProgram(0x00000000);
-	}
-}

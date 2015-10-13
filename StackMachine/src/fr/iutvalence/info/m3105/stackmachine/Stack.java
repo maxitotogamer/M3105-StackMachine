@@ -1,14 +1,11 @@
 package fr.iutvalence.info.m3105.stackmachine;
 
-public class Stack
+public interface Stack
 {
-	private int[] tableau;
+
+	public abstract void clearStack();
+
+	public abstract void push(int word) throws InvalidParametersException;
 	
-	public Stack(int taille){
-		this.tableau = new int[taille];
-	}
-	
-	public void clearStack(){
-	
-	}
+	public abstract void pop();
 }
